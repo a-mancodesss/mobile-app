@@ -5,7 +5,7 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 const index = () => {
   return (
     <SafeAreaView>
-      <Text>This is my home page</Text>
+      <Text>This is my About page</Text>
     </SafeAreaView>
   )
 }
