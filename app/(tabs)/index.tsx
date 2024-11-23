@@ -1,15 +1,31 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import { SafeAreaView } from 'react-native-safe-area-context'
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import { View,Text } from 'react-native';
 
-const index = () => {
-  return (
-    <SafeAreaView>
-      <Text>This is my home page</Text>
-    </SafeAreaView>
-  )
-}
+//generate homescreen and profilescreen component simply saying this is <component> page
 
-export default index
+export const HomeScreen = () => {
+    return (
+        <View>
+        <Text>Home Screen</Text>
+        </View>
+    );
+    }
+  export  const ProfileScreen = () => {
+    return (
+        <View>
+        <Text>Profile Screen</Text>
+        </View>
+    );
+    }
 
-const styles = StyleSheet.create({})
+
+    const Tab = createMaterialTopTabNavigator();
+    
+    export default function MyTabs() {
+      return (
+        <Tab.Navigator>
+          <Tab.Screen name="Home" component={HomeScreen} />
+          <Tab.Screen name="Profile" component={ProfileScreen} />
+        </Tab.Navigator>
+      );
+    }
